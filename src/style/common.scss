@@ -1,0 +1,26 @@
+$base-color: #0147A7;
+
+body {
+  background: $base-color;
+  color: #fff;
+}
+
+a {
+  color: #03A9F4;
+}
+
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  display: block;
+  h1 {
+    font-size: 48px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}
