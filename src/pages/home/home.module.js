@@ -1,17 +1,6 @@
 import angular from 'angular'
+import {HomeIndexComponent} from './home.component'
 
-class HomeIndexController {
-  constructor () {
-    this.title = 'HomeComponent'
-  }
-}
-
-class HomeIndexComponent {
-  constructor () {
-    this.template = require('./home.view.html')
-    this.controller = HomeIndexController
-  }
-}
 
 const HOME_MODULE = angular
   .module('home.module', [])
