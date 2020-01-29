@@ -1,9 +1,19 @@
 import angular from 'angular'
-import {HomeIndexComponent} from './home.component'
 
+class HomeController {
+  constructor () {
+    this.title = 'HomeComponent'
+    this.msg = 'TEST'
+  }
+}
 
-const HOME_MODULE = angular
+class HomeComponent {
+  constructor () {
+    this.template = require('./home.view.html')
+    this.controller = HomeController
+  }
+}
+
+export default angular
   .module('home.module', [])
-  .component('homeComponent', new HomeIndexComponent())
-
-export {HOME_MODULE}
+  .component('homeComponent', new HomeComponent())

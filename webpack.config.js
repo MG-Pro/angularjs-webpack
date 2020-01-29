@@ -65,6 +65,7 @@ module.exports = (() => {
     devServer: {
       contentBase: './src/static',
       stats: 'minimal',
+      historyApiFallback: true,
       host: '127.0.0.2',
     },
   }

@@ -2,7 +2,7 @@ import angular from 'angular'
 
 class NavigationController {
   constructor () {
-    this.title = 'HomeComponent'
+
   }
 }
 
@@ -13,8 +13,7 @@ class NavigationComponent {
   }
 }
 
-const nav = angular
+export default angular
   .module('nav', [])
   .component('navigation', new NavigationComponent())
 
-export {nav}
