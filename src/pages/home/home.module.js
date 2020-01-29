@@ -1,10 +1,20 @@
 import angular from 'angular'
+import apiServiceModule from '../../services/apiService'
 
 class HomeController {
-  constructor () {
-    this.title = 'HomeComponent'
-    this.msg = 'TEST'
+  constructor ($scope, $http, apiService) {
+    this.apiService = apiService
+    this.title = 'Welcome!'
+    this.list = []
   }
+
+  $onInit() {
+    this.apiService.getItems().then((res) => {
+      this.list = res.data
+    })
+  }
+
+  static $inject = ["$scope", "$http", 'apiService']
 }
 
 class HomeComponent {
@@ -15,5 +25,5 @@ class HomeComponent {
 }
 
 export default angular
-  .module('home.module', [])
+  .module('home.module', [apiServiceModule.name])
   .component('homeComponent', new HomeComponent())
