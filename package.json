@@ -9,7 +9,7 @@
   "author": "MG",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-ui-router": "^1.0.24",
     "oclazyload": "^1.1.0"
   },
